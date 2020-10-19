@@ -1,7 +1,9 @@
 {
   "name": "@wc/cra-template-tailwind",
   "version": "0.1.0",
-  "private": true,
+  "description": "A Create React App template with Tailwind css",
+  "author": "WessCoby <cobygiven@gmail.com>",
+  "main": "template.json",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -21,8 +23,19 @@
     "start:dev": "concurrently \"yarn watch:tailwind\" \"yarn start\"",
     "prebuild": "yarn build:tailwind",
     "build": "react-scripts build",
+    "clean-files": "rm ./src/index.css && rm -rf ./template/public ./template/src && rm -f ./template/README.md ./template/tailwind.config.json ./template/postcss.config.js ./template/tailwind.css ./template/gitignore ./template/gitignore",
+    "copy-files": "cp -a ./src/. template/src && cp -a ./public/. template/public && cp postcss.config.js tailwind.css tailwind.config.js template/ && cp ./.gitignore ./template/gitignore && cp ./README_CRA.md ./template/README.md",
+    "prepublishOnly": "yarn clean-files && yarn copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wesscoby/cra-template-tailwind",
+    "directory": "/"
+  },
+  "bugs": {
+    "url": "https://github.com/wesscoby/cra-template-tailwind/issues"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +51,26 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "keywords": [
+    "react",
+    "create-react-app",
+    "cra-template",
+    "template",
+    "tailwind",
+    "tailwind-css",
+    "tailwindcss",
+    "react-tailwindcss",
+    "react-tailwind",
+    "react-tailwind-css"
+  ],
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest",
+    "access": "public"
   }
 }
