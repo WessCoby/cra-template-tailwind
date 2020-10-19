@@ -4,9 +4,9 @@
 ### Usage
 
 ```bash
-npx create-react-app your-project-name --template @wc/tailwind
+npx create-react-app your-project-name --template @wesnet/tailwind
 
 # or
 
-yarn create react-app your-project-name --template @wc/tailwind
+yarn create react-app your-project-name --template @wesnet/tailwind
 ```
