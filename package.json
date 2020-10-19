@@ -1,6 +1,7 @@
 {
   "name": "@wc/cra-template-tailwind",
   "version": "0.1.0",
+  "license": "MIT",
   "description": "A Create React App template with Tailwind css",
   "author": "WessCoby <cobygiven@gmail.com>",
   "main": "template.json",
